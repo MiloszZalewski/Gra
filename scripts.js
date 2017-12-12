@@ -115,3 +115,14 @@ function setGamePoints() {
     computerPointsElem.innerHTML = computer.score;
 }
 
+function endOfTheGame () {
+    if (player.score == 10) {
+        console.log('Congratulations!!! You are the winner');
+        gameState = 'ended';
+        setGameElements();
+} else if (computer.score == 10) {
+        console.log('Computer won the game!');
+        gameState = 'ended';
+        setGameElements ();
+    }
+}

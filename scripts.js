@@ -111,11 +111,14 @@ function playerPick(playerPick) {
     computerPickElem.innerHTML = computerPick;
 
     checkRoundWinner(playerPick, computerPick);
+    setGamePoints();
+    endOfTheGame();
 }
 
 function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
+    setGamePoints();
 }
 
 function endOfTheGame () {

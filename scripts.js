@@ -56,7 +56,10 @@ var playerPointsElem = document.getElementById('js-playerPoints'),
             playerNameElem.innerHTML = player.name;
             setGamePoints();
   }
+}
 
+function playerPick(playerPick) {
+    console.log(playerPick);
 }
 
 function getComputerPick() {
@@ -116,11 +119,11 @@ function setGamePoints() {
 }
 
 function endOfTheGame () {
-    if (player.score == 10) {
+    if (player.score === 10) {
         console.log('Congratulations!!! You are the winner');
         gameState = 'ended';
         setGameElements();
-} else if (computer.score == 10) {
+} else if (computer.score === 10) {
         console.log('Computer won the game!');
         gameState = 'ended';
         setGameElements ();
